@@ -23,6 +23,7 @@ body {
     gap: 15px;
 }
 
+
 .btn .play {
     background: #f42e79;
     position: relative;
@@ -35,6 +36,14 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 15px 25px #f42e7966;
+
+    /* active when btn is clicked */
+    transition: 0.5s
+}
+
+/* will show if btn is clicked */
+.btn.active .play {
+    box-shadow: 0 0 0 150vh #f42e79;
 }
 
 .btn .play::before {
