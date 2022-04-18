@@ -72,7 +72,7 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0);
     width: 100%;
     height: 100%;
 
@@ -83,8 +83,13 @@ body {
 }
 
 .clip video {
-    /* max-width: 80%; */
+    /* max-width: 90%; */
     max-width: 900px;
 }
 
 /* responsive */
+@media(max-width: 991px) {
+    .clip video {
+        max-width: 90%;
+    }
+}
