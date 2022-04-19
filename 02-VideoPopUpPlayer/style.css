@@ -44,6 +44,8 @@ body {
 /* will show if btn is clicked */
 .btn.active .play {
     box-shadow: 0 0 0 150vh #f42e79;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    /* offset refers to: relative to the element itself(either X or Y) */
 }
 
 .btn .play::before {
