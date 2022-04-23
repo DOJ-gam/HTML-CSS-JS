@@ -42,6 +42,10 @@ body {
 
 }
 
+.navigation .toggle.active {
+    background-color: #152f47
+}
+
 .navigation .toggle::before {
     content: '+';
     position: absolute;
@@ -54,4 +58,10 @@ body {
     align-items: center;
     justify-content: center;
 
+    transition: 0.5s;
+
+}
+
+.navigation .toggle.active::before {
+    transform: rotate(315deg);
 }
