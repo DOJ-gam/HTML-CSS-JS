@@ -6,6 +6,7 @@ toggle.addEventListener("click", (event) => {
   navigation.classList.toggle("active");
 });
 
+// MovementX and Y come along with the 'onmousemove'
 function onDrag({ movementX, movementY }) {
   let getStyle = window.getComputedStyle(navigation);
   let leftVal = parseInt(getStyle.left);
@@ -24,6 +25,7 @@ navigation.addEventListener("mousedown", () => {
 //   navigation.addEventListener("mousemove", onDrag);
 // });
 
+// clears the event anytime the mouse is moved
 document.addEventListener("mouseup", () => {
   navigation.removeEventListener("mousemove", onDrag);
 });
