@@ -19,12 +19,24 @@ body {
     height: 50px;
     width: 50px;
     position: relative;
-    transition: 0.5s;
     z-index: 100000;
     border-radius: 4px;
 
     /* to show the border-radius we do this , else the .toggle will overflow */
     overflow: hidden;
+
+    /* increate height and with, the delays are respective to the transition(when moving from active to simple nav, decrease the width immidiately,  and wait for 0.75, then decrease height */
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+
+}
+
+.navigation.active {
+    width: 250px;
+    height: 350px;
+    /* on click, increase height immidiately, then after .75s increase width */
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
 }
 
 .navigation .toggle {
