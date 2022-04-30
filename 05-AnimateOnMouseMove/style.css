@@ -10,3 +10,46 @@ body {
     background: #f87171;
     overflow: hidden;
 }
+
+span {
+    position: absolute;
+
+    /* Set whether or not an element should react to pointer events(eg on hover) */
+    pointer-events: none;
+    animation: fadeInOut 1s linear infinite;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    20%,
+    80% {
+        opacity: 1
+    }
+}
+
+span::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url('../images/logoDOJ.png');
+    background-size: cover;
+    animation: moveShape 1s linear infinite;
+}
+
+@keyframes moveShape {
+    0% {
+        transform: translate(0) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(300px) rotate(360deg)
+    }
+}
